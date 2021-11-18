@@ -209,49 +209,49 @@ The course has more than 1,500 hours of classroom and online classes, starting f
 - [ ] 29-2: _NodeJS - File Upload with Multer_
 - [ ] 29-3: _[Project - Cookmaster V2]()_
 
-##### Block 30: Introdução - Deploy
+##### Block 30: Introduction - Deploy
 
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [ ] 30-1: _Infraestructure - Deploy with Heroku_
+- [ ] 30-2: _Deploy - Process Managers_
+- [ ] 30-3: _[Project - Stranger Things]()_
 
-##### Block 31: Projeto
+##### Block 31: Project
 
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [ ] 31-1: _[Project - Trybeer]()_
 
-##### Block 32: Arquitetura de Software
+##### Block 32: Software Architecture 
 
-- [ ] 32-1: _Arquitetura - Princípios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
+- [ ] 32-1: _Architecture - SOLID Elements_
+- [ ] 32-2: _ORM - Application interface with the database_
+- [ ] 32-3: _Software Architecture - DDD_
+- [ ] 32-4: _Good Practices in Writing Tests_
+- [ ] 32-3: _[Project - Blogs API]()_
 
 ##### Block 33: Sockets
 
 - [ ] 30-1: _Sockets - TCP/UDP & NET_
 - [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
+- [ ] 30-3: _[Project - Webchat]()_
 
-##### Block 34: Projeto
+##### Block 34: Project
 
-- [ ] 34-1: _[Projeto - Trybeer V2]()_
+- [ ] 34-1: _[Project - Trybeer V2]()_
 
-## Ciência da Computação :hourglass_flowing_sand:
+## Computing Science :hourglass_flowing_sand:
 
-##### Block 35: Introdução - Ciência da Computação
+##### Block 35: Introduction - Computing Science
 
-- [ ] 35-1: _Arquitetura de Computadores_
-- [ ] 35-2: _Arquitetura de redes_
-- [ ] 35-3: _Redes de computadores, ferramentas e segurança_
-- [ ] 35-4: _[Projeto - Explorando os protocolos]()_
+- [ ] 35-1: _Computer Architecture_
+- [ ] 35-2: _Networks Architecture_
+- [ ] 35-3: _Computer Networks,tools and security_
+- [ ] 35-4: _[Project - Exploring the protocols]()_
 
 ##### Block 36: Python
 
-- [ ] 35-1: _Aprendendo Python_
-- [ ] 35-2: _Testes e Exceções_
-- [ ] 35-3: _Entrada e Saída de dados_
-- [ ] 36-4: _Entrada e Saída de dados_
-- [ ] 35-5: _[Projeto - Tech news]()_
+- [ ] 35-1: _Learning Python_
+- [ ] 35-2: _Tests and Exceptions_
+- [ ] 35-3: _Data Input and Output_
+- [ ] 36-4: _Data Input and Output_
+- [ ] 35-5: _[Project - Tech news]()_
 
 # [...]
