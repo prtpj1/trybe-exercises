@@ -12,8 +12,9 @@ h3 {
 .secundaria {
     background-color: green;
 }
-.complementar {
+div.complementar {
     background-color: orange;
+    padding: 20px;
     
     
 }
