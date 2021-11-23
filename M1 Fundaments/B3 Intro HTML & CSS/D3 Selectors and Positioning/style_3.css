@@ -1,0 +1,29 @@
+div:hover {
+    border: 5px solid red;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.primaria {
+    background-color: red;
+}
+.secundaria {
+    background-color: green;
+}
+.complementar {
+    background-color: orange;
+    
+    
+}
+.escura {
+    background-color: rgb(66, 9, 9);
+}
+.clara {
+    background-color: pink;
+}
+.impar {
+    font-style: italic;
+}
+
