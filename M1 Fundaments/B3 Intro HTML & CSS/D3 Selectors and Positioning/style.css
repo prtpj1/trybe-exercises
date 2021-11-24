@@ -1,5 +1,15 @@
-h1 {
+h1,
+h3 {
   text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+.premios li {
+  display: inline-block;
+  position: relative;
 }
 
 .first {
@@ -8,6 +18,8 @@ h1 {
   height: 50px;
   text-align: center;
   width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
 .second {
@@ -24,4 +36,10 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
+}
+
+.second,
+.third {
+  display: inline-block;
+  position: relative;
 }
