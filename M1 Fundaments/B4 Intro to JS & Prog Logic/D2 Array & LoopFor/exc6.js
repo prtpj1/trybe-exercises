@@ -6,8 +6,7 @@ for (let i = 0; i < numbers.length; i += 1) {
   if (numbers[i] % 2 == 1) {
     impar = numbers[i];
     console.log(numbers[i]);
-  }else {
+  } else {
     console.log("nenhum valor ímpar encontrado");
   }
 }
-
