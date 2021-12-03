@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+        main,
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>
+    <main class="main-content">
+        <section class="center-content">
+            <p>Texto padrão do nosso site</p>
+            <p>-----</p>
+            <p>Trybe</p>
+        </section>
+    </main>
+    <script>
+        function twoYears() {
+            document.getElementsByTagName("p")[0].innerText = "Barnaby The Bear’s my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear’s my name. Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high, so high so high so high, so — if you want to sing this way, think of what you’d like to say, add a tune and you will see, just how easy it can be. Treacle pudding, fish and chips, fizzy drinks and liquorice, flowers, rivers, sand and sea, snowflakes and the stars are free.";
+        }
+        twoYears();
+
+        function toGreen() {
+            document.getElementsByClassName("main-content")[0].style.backgroundColor = "rgb(76,164,109)";
+        }
+        toGreen();
+
+        function toWhite() {
+            document.getElementsByClassName("center-content")[0].style.backgroundColor = "white";
+
+        }
+        toWhite();
+
+        function fixText() {
+            document.getElementsByClassName("title")[0].innerText = "Exercício 5.1 - JavaScript"
+
+        }
+        fixText();
+
+        function toUpper() {
+            let parags = document.getElementsByTagName("p");
+            for (let i = 0; i < parags.length; i += 1) {
+                parags[i].style.textTransform = "uppercase";
+            }
+        }
+        toUpper();
+
+        function allP() {
+            let allParags = document.getElementsByTagName("p");
+            for (let i = 0; i < allParags.length; i += 1) {
+                console.log(allParags[i]);
+            }
+
+        }
+        allP();
+    </script>
+</body>
+
+</html>
