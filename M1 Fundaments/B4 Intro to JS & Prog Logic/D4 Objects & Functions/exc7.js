@@ -17,4 +17,3 @@ let novoFav = {
   editor: 'Rocco',
 };
 leitor.livrosFavoritos.push(novoFav);
-
