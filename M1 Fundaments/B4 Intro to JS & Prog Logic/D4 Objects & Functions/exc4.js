@@ -4,4 +4,10 @@ let info = {
   note: "Namorada do personagem principal nos quadrinhos do Pato Donald",
 };
 
-console.log("Bem-vinda, " + info.personagem);
+info["recorrente"] = "Sim";
+
+
+for (let i in info) {
+  console.log(i);
+}
+
