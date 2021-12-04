@@ -11,7 +11,10 @@ let leitor = {
   ],
 };
 
-let nomeC = leitor.nome + " " + leitor.sobrenome;
-let livro = leitor.livrosFavoritos[0];
+let novoFav = {
+  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+  autor: 'JK Rowling',
+  editor: 'Rocco',
+};
+leitor.livrosFavoritos.push(novoFav);
 
-console.log("O livro favorito de " + nomeC + " se chama " + livro["titulo"]);
