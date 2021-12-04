@@ -1,4 +1,4 @@
-function  maiorValor(numb) {
+function  menorValor(numb) {
   let n1 = numb[0];
   let nMenor = [];
   let mValor = [];
@@ -11,4 +11,4 @@ function  maiorValor(numb) {
   console.log(mValor);
 }
 
-maiorValor([2, 4, 6, 7, 10, 0, -3]);
+menorValor([2, 4, 6, 7, 10, 0, -3]);
