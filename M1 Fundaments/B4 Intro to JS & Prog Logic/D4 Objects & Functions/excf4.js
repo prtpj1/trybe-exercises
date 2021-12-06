@@ -1,5 +1,5 @@
 function  maisCharacteres(str) {
-  let char0 = str[0];
+  
   let maisChar = '';
   let result = [];
   

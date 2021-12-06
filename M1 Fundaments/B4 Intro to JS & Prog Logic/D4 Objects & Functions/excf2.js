@@ -1,14 +1,10 @@
-function  maiorValor(numb) {
-  let n1 = numb[0];
-  let nMaior = [];
-  let mValor = [];
-  for (let i = 0; i < numb.length; i+=1) {
-    if(n1 < numb[i]) {
+function maiorValor(numb) {
+  let nMaior = numb[0];
+  for (let i = 0; i < numb.length; i += 1) {
+    if (nMaior < numb[i]) {
       nMaior = numb[i];
     }
   }
-  mValor = numb.indexOf(nMaior);
-  console.log(mValor);
+  console.log(nMaior);
 }
-
-maiorValor([2, 3, 6, 7, 10, 1]);
+maiorValor([2, 33, 6, 7, 10, 11]);
