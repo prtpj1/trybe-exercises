@@ -54,8 +54,25 @@ function holidayButton(btnName) {
   let btnContainer = document.querySelector(".buttons-container");
   let newBtn = document.createElement("button");
   newBtn.innerHTML = btnName;
-  newBtn.id = "btnHoliday";
+  newBtn.id = "btn-holiday";
   btnContainer.appendChild(newBtn);
 }
 holidayButton("Feriados");
 
+function coloredHoliday() {
+  let holidayBtn = document.getElementById("btn-holiday");
+  let holidays = document.getElementsByClassName("holiday");
+  let bgColor = 'rgb(238,238,238)';
+  let newColor = 'lightgreen';
+
+  holidayBtn.addEventListener("click", function () {
+    for (let i = 0; i < holidays.length; i += 1) {
+      if (holidays[i].style.backgroundColor === newColor) {
+        holidays[i].style.backgroundColor = bgColor;
+      } else {
+        holidays[i].style.backgroundColor = newColor;
+      }
+    }
+  });
+}
+coloredHoliday();
