@@ -34,12 +34,16 @@ function daysOfMonth() {
     let day = dezDaysList[i];
     let dayItem = document.createElement('li');
 
-    if (day === 24 || day === 25 || day === 31) {
+    if (day === 24 || day === 31) {
       dayItem.className = 'day holiday';
       dayItem.innerHTML = day;
       daysL.appendChild(dayItem);
-    } else if (day === 4 || day === 11 || day === 18 || day === 25) {
+    } else if (day === 4 || day === 11 || day === 18) {
       dayItem.className = 'day friday';
+      dayItem.innerHTML = day;
+      daysL.appendChild(dayItem);
+    } else if (day === 25) {
+      dayItem.className = 'day holiday friday';
       dayItem.innerHTML = day;
       daysL.appendChild(dayItem);
     } else {
@@ -48,7 +52,7 @@ function daysOfMonth() {
     }
   }
 }
-daysOfMonth();
+
 
 function holidayButton(btnName) {
   let btnContainer = document.querySelector('.buttons-container');
@@ -57,18 +61,18 @@ function holidayButton(btnName) {
   newBtn.id = 'btn-holiday';
   btnContainer.appendChild(newBtn);
 }
-holidayButton('Feriados');
 
-function fridayButton(btnName){
-    let btnContainer = document.querySelector('.buttons-container');
-    let newBtn = document.createElement('button');
-    
-    newBtn.innerHTML = btnName;
-    newBtn.id = 'btn-friday';
-    btnContainer.appendChild(newBtn);
+
+function fridayButton(btnName) {
+  let btnContainer = document.querySelector('.buttons-container');
+  let newBtn = document.createElement('button');
+
+  newBtn.innerHTML = btnName;
+  newBtn.id = 'btn-friday';
+  btnContainer.appendChild(newBtn);
 }
-fridayButton('Sextas-feiras');
 
+let holiday = [24, 25, 31];
 function coloredHoliday() {
   let holidayBtn = document.getElementById('btn-holiday');
   let holidays = document.getElementsByClassName('holiday');
@@ -85,4 +89,29 @@ function coloredHoliday() {
     }
   });
 }
-coloredHoliday();
+
+
+let friday = [4, 11, 18, 25];
+function coloredFridays(friday) {
+  let fridayBtn = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday');
+  let fridayText = '!SEXTOU!';
+  fridayText.inner;
+
+  fridayBtn.addEventListener('click', () => {
+    for (let i = 0; i < fridays.length; i += 1) {
+      if (fridays[i].innerHTML !== fridayText) {
+        fridays[i].innerHTML = fridayText;
+      } else {
+        fridays[i].innerHTML = friday[i];
+      }
+    }
+  });
+}
+
+
+daysOfMonth();
+fridayButton('Sextas-feiras');
+holidayButton('Feriados');
+coloredFridays(friday);
+coloredHoliday(holiday);
