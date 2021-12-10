@@ -1,18 +1,18 @@
 function createDaysOfTheWeek() {
   const weekDays = [
-    "Domingo",
-    "Segunda",
-    "Terça",
-    "Quarta",
-    "Quinta",
-    "Sexta",
-    "Sábado",
+    'Domingo',
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sábado',
   ];
-  const weekDaysList = document.querySelector(".week-days");
+  const weekDaysList = document.querySelector('.week-days');
 
   for (let index = 0; index < weekDays.length; index += 1) {
     const days = weekDays[index];
-    const dayListItem = document.createElement("li");
+    const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
 
     weekDaysList.appendChild(dayListItem);
@@ -29,17 +29,17 @@ const dezDaysList = [
 ];
 
 function daysOfMonth() {
-  let daysL = document.getElementById("days");
+  let daysL = document.getElementById('days');
   for (let i = 0; i < dezDaysList.length; i += 1) {
     let day = dezDaysList[i];
-    let dayItem = document.createElement("li");
+    let dayItem = document.createElement('li');
 
     if (day === 24 || day === 25 || day === 31) {
-      dayItem.className = "day holiday";
+      dayItem.className = 'day holiday';
       dayItem.innerHTML = day;
       daysL.appendChild(dayItem);
     } else if (day === 4 || day === 11 || day === 18 || day === 25) {
-      dayItem.className = "day friday";
+      dayItem.className = 'day friday';
       dayItem.innerHTML = day;
       daysL.appendChild(dayItem);
     } else {
@@ -51,21 +51,31 @@ function daysOfMonth() {
 daysOfMonth();
 
 function holidayButton(btnName) {
-  let btnContainer = document.querySelector(".buttons-container");
-  let newBtn = document.createElement("button");
+  let btnContainer = document.querySelector('.buttons-container');
+  let newBtn = document.createElement('button');
   newBtn.innerHTML = btnName;
-  newBtn.id = "btn-holiday";
+  newBtn.id = 'btn-holiday';
   btnContainer.appendChild(newBtn);
 }
-holidayButton("Feriados");
+holidayButton('Feriados');
+
+function fridayButton(btnName){
+    let btnContainer = document.querySelector('.buttons-container');
+    let newBtn = document.createElement('button');
+    
+    newBtn.innerHTML = btnName;
+    newBtn.id = 'btn-friday';
+    btnContainer.appendChild(newBtn);
+}
+fridayButton('Sextas-feiras');
 
 function coloredHoliday() {
-  let holidayBtn = document.getElementById("btn-holiday");
-  let holidays = document.getElementsByClassName("holiday");
+  let holidayBtn = document.getElementById('btn-holiday');
+  let holidays = document.getElementsByClassName('holiday');
   let bgColor = 'rgb(238,238,238)';
   let newColor = 'lightgreen';
 
-  holidayBtn.addEventListener("click", function () {
+  holidayBtn.addEventListener('click', () => {
     for (let i = 0; i < holidays.length; i += 1) {
       if (holidays[i].style.backgroundColor === newColor) {
         holidays[i].style.backgroundColor = bgColor;
