@@ -35,17 +35,27 @@ function daysOfMonth() {
     let dayItem = document.createElement("li");
 
     if (day === 24 || day === 25 || day === 31) {
-      dayItem.className = 'day holiday';
+      dayItem.className = "day holiday";
       dayItem.innerHTML = day;
       daysL.appendChild(dayItem);
     } else if (day === 4 || day === 11 || day === 18 || day === 25) {
-        dayItem.className = 'day friday';
-        dayItem.innerHTML = day;
-        daysL.appendChild(dayItem);
+      dayItem.className = "day friday";
+      dayItem.innerHTML = day;
+      daysL.appendChild(dayItem);
     } else {
-        dayItem.innerHTML = day;
-        daysL.appendChild(dayItem);
+      dayItem.innerHTML = day;
+      daysL.appendChild(dayItem);
     }
   }
 }
 daysOfMonth();
+
+function holidayButton(btnName) {
+  let btnContainer = document.querySelector(".buttons-container");
+  let newBtn = document.createElement("button");
+  newBtn.innerHTML = btnName;
+  newBtn.id = "btnHoliday";
+  btnContainer.appendChild(newBtn);
+}
+holidayButton("Feriados");
+
