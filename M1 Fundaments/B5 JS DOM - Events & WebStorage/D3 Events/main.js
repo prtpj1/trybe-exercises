@@ -27,7 +27,10 @@ thirdLi.addEventListener("click", function () {
   thirdLi.classList.add("tech");
 });
 
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+input.addEventListener('input', function (event) {
+  let classTech = document.querySelector('.tech');
+  classTech.innerText = event.target.value;
+});
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
