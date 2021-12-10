@@ -32,9 +32,16 @@ input.addEventListener('input', function (event) {
   classTech.innerText = event.target.value;
 });
 
-myWebpage.addEventListener('dblclick', function() {
+myWebpage.addEventListener('dblclick', doubleC);
+myWebpage.addEventListener('mouseover', overColor);
+
+function doubleC () {
   window.open('https://prtpj1.github.io/');
-});
+}
+
+function overColor (event) {
+  event.target.style.color = 'cyan';
+}
 
 
 
