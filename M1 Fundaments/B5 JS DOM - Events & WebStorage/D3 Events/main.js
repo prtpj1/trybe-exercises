@@ -45,11 +45,6 @@ function overColor (event) {
 
 
 
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-// a cor do mesmo;
-
-// Segue abaixo um exemplo do uso de event.target:
-
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = "Opção reiniciada";
