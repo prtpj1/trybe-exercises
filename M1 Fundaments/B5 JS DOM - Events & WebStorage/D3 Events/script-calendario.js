@@ -139,6 +139,18 @@ function taskSubtitle(cor) {
   taskContainer.appendChild(newTask);
 }
 
+function taskSelect() {
+  let taskSelected = document.getElementsByClassName('task selected');
+  let task = document.querySelector('.task');
+
+  task.addEventListener('click', (event) => {
+    if (taskSelected.length === 0) {
+      event.target.className = 'task selected';
+    }else {
+      event.target.className = 'task';
+    }
+  });
+}
 
 daysOfMonth(); //cria o calendario
 fridayButton("Sextas-feiras");
@@ -149,3 +161,4 @@ dayMouseOver();
 dayMouseOut();
 newTasks('Estudar');
 taskSubtitle('darkgreen');
+taskSelect();

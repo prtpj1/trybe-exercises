@@ -87,8 +87,8 @@ label {
 }
 
 .my-tasks div:hover {
-  height: 45px;
-  width: 45px;
+  height: 15px;
+  width: 15px;
 }
 
 .my-tasks span {
