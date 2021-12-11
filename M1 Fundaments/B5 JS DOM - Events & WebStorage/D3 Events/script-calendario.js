@@ -124,10 +124,19 @@ function dayMouseOut() {
   });
 }
 
-dayMouseOver();
-dayMouseOut();
+function newTasks(task) {
+  let taskContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+  taskName.innerHTML = task;
+  taskContainer.appendChild(taskName)
+}
+
+
 daysOfMonth();
 fridayButton("Sextas-feiras");
 holidayButton("Feriados");
 coloredFridays(friday);
 coloredHoliday(holiday);
+dayMouseOver();
+dayMouseOut();
+newTasks('Estudar');
