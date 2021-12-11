@@ -131,8 +131,16 @@ function newTasks(task) {
   taskContainer.appendChild(taskName)
 }
 
+function taskSubtitle(cor) {
+  let taskContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+  newTask.className = 'task';
+  newTask.style.backgroundColor = cor;
+  taskContainer.appendChild(newTask);
+}
 
-daysOfMonth();
+
+daysOfMonth(); //cria o calendario
 fridayButton("Sextas-feiras");
 holidayButton("Feriados");
 coloredFridays(friday);
@@ -140,3 +148,4 @@ coloredHoliday(holiday);
 dayMouseOver();
 dayMouseOut();
 newTasks('Estudar');
+taskSubtitle('darkgreen');
