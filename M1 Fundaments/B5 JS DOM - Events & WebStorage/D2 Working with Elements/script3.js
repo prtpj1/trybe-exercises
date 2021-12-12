@@ -1,79 +1,46 @@
 let novoIrmao = document.querySelector('#pai');
-let newElement = document.createElement('div');
-newElement.id = 'bastardinho';
-novoIrmao.appendChild(newElement);
-
+let novoElemento = document.createElement('div');
+novoElemento.id = 'bastardinho';
+novoIrmao.appendChild(novoElemento);
 
 let novoFilhoOnde = document.querySelector('#elementoOndeVoceEsta');
-let newElement2 = document.createElement('div');
-newElement2.id = 'OndeEstouJr';
-novoFilhoOnde.appendChild(newElement2);
-
+let novoElemento2 = document.createElement('div');
+novoElemento2.id = 'OndeEstouJr';
+novoFilhoOnde.appendChild(novoElemento2);
 
 let novoFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
-let newElementJose = document.createElement('div');
-newElementJose.id = 'Jose';
-novoFilhoDoFilho.appendChild(newElementJose);
+let novoElementoJose = document.createElement('div');
+novoElementoJose.id = 'Jose';
+novoFilhoDoFilho.appendChild(novoElementoJose);
 
-let filhos = document.querySelector('#paiDoPai').firstElementChild.children;
-// 
+let pai = document.getElementById('pai');
+let ondeEstou = document.getElementById('elementoOndeVoceEsta');
+let filhoJose = document.getElementById('Jose');
 
-for(i = 0; i < filhos.length; i+=1){
-    let classFilhos = filhos[i];
-    classFilhos.className = 'familia';
+for (let i = pai.childNodes.length - 1; i >= 0; i -= 1) {
+  let filhoAtual = pai.childNodes[i];
+  if (filhoAtual.id !== 'elementoOndeVoceEsta') {
+    filhoAtual.remove();
+  }
 }
-
-let papai = document.querySelectorAll('.familia');
-
-for (i = 0; i < papai.length; i+=1){
-    let elimina = papai[i];
-    
-    if(elimina.innerHTML.includes('elementoOndeVoceEsta')) {
-        papai.removeChild(elimina);
-    }
+for (let i = ondeEstou.childNodes.length - 1; i >= 0; i -= 1) {
+  let filhoAtual = ondeEstou.childNodes[i];
+  if (filhoAtual.id !== 'primeiroFilhoDoFilho') {
+    filhoAtual.remove();
+  }
 }
-
-
-
-
-
-/*
-
-<main id="paiDoPai">
-        <section id="pai">*
-          <section id="primeiroFilho"></section>
-          <section id="elementoOndeVoceEsta">*
-            <section id="primeiroFilhoDoFilho"></section>*
-            <section id="segundoEUltimoFilhoDoFilho"></section>
+filhoJose.remove();
+/* 
+<main id='paiDoPai'>
+        <section id='pai'>*
+          <section id='primeiroFilho'></section>
+          <section id='elementoOndeVoceEsta'>*
+            <section id='primeiroFilhoDoFilho'></section>*
+            <section id='segundoEUltimoFilhoDoFilho'></section>
           </section>
           Atenção!
-          <section id="terceiroFilho"></section>
-          <section id="quartoEUltimoFilho"></section>
+          <section id='terceiroFilho'></section>
+          <section id='quartoEUltimoFilho'></section>
         </section>
       </main>
-
-let novoIrmao = document.querySelector('#pai');
-
-let newElement = document.createElement('div');
-newElement.id = 'bastardinho';
-
-novoIrmao.appendChild(newElement);
-
-
-let novoFilhoOnde = document.querySelector('#elementoOndeVoceEsta');
-let newElement2 = document.createElement('div');
-
-newElement2.id = 'OndeEstouJr';
-
-novoFilhoOnde.appendChild(newElement2);
-
-
-let novoFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
-let newElementJose = document.createElement('div');
-
-newElementJose.id = 'Jose';
-
-novoFilhoDoFilho.appendChild(newElementJose);
-
-
-document.querySelector('#Jose').parentNode.parentNode.nextElementSibling; */
+ */
