@@ -1,23 +1,5 @@
-//toStick I
-document.getElementById('elementoOndeVoceEsta');
+//Part I
+let h1 = document.createElement('h1');
+h1.innerText = 'Exercicio 5.2 - Javascript DOM';
+document.body.appendChild(h1);
 
-//toStick II
-document.querySelector('#elementoOndeVoceEsta').parentNode.parentNode.style.color = 'red';
-
-//toStick III
-document.querySelector('#elementoOndeVoceEsta').children.primeiroFilhoDoFilho.innerText = "Filho do Filho";
-
-//toStick IV
-document.querySelector('#pai').firstElementChild;
-
-//toStick V
-document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
-
-//toStick VI
-document.querySelector('#elementoOndeVoceEsta').nextSibling
-
-//toStick VII
-document.querySelector('#elementoOndeVoceEsta').nextElementSibling
-
-//toStick VIII
-document.querySelector('#pai').lastElementChild.previousElementSibling
