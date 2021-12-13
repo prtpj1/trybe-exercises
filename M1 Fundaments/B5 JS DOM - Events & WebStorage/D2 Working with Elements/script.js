@@ -56,3 +56,9 @@ for (let i = 0; i < 3; i+=1){
 //Part X
 let title = document.querySelector('h1');
 title.className = 'title';
+
+//Part XI
+let h3Description = document.createElement('h3');
+for (let i = 0; i < 3; i+=1){
+    h3Description[i].className = 'description';
+}
