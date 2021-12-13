@@ -18,3 +18,8 @@ let p = document.createElement('p');
 p.innerHTML = 'Algum texto';
 sectionCenter.appendChild(p);
 
+//Part V
+let sectionLeft = document.createElement('section');
+sectionLeft.className = ('left-content');
+main.appendChild('sectionLeft');
+
