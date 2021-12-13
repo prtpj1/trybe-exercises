@@ -52,3 +52,7 @@ for (let i = 0; i < 3; i+=1){
     h3.innerHTML = 'Show ' + i;
     main.appendChild(h3);
 }
+
+//Part X
+let title = document.querySelector('h1');
+title.className = 'title';
