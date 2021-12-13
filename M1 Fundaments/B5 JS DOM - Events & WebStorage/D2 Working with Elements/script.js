@@ -80,3 +80,7 @@ mainContent.removeChild(leftContent);
 //Part XIII
 let rightContent = document.querySelector('.right-content');
 rightContent.style.marginRight = 'auto';
+
+//Part XIV
+let centerContent = document.querySelector('.center-content');
+centerContent.parentNode.style.backgroundColor = 'green';
