@@ -34,23 +34,32 @@ imgElement.className = 'small-image';
 imgElement.src = 'https://picsum.photos/200';
 sectionLeft.appendChild(imgElement);
 
-
 //Part VIII
 let ui = document.createElement('ul');
 sectionRight.appendChild(ui);
-let numbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
-'Sete', 'Oito', 'Nove', 'Dez'];
+let numbers = [
+  'Um',
+  'Dois',
+  'Três',
+  'Quatro',
+  'Cinco',
+  'Seis',
+  'Sete',
+  'Oito',
+  'Nove',
+  'Dez',
+];
 for (let i in numbers) {
-    let li = document.createElement('li');
-    li.innerHTML = numbers[i];
-    ui.appendChild(li);
+  let li = document.createElement('li');
+  li.innerHTML = numbers[i];
+  ui.appendChild(li);
 }
 
 //Part IX
-for (let i = 0; i < 3; i+=1){
-    let h3 = document.createElement('h3');
-    h3.innerHTML = 'Show ' + i;
-    main.appendChild(h3);
+for (let i = 0; i < 3; i += 1) {
+  let h3 = document.createElement('h3');
+  h3.innerHTML = 'Show ' + i;
+  main.appendChild(h3);
 }
 
 //Part X
@@ -58,7 +67,16 @@ let title = document.querySelector('h1');
 title.className = 'title';
 
 //Part XI
-let h3Description = document.createElement('h3');
-for (let i = 0; i < 3; i+=1){
-    h3Description[i].className = 'description';
+let h3Description = document.getElementsByTagName('h3');
+for (let i = 0; i < 3; i += 1) {
+  h3Description[i].className = 'description';
 }
+
+//Part XII
+let leftContent = document.querySelector('.left-content');
+let mainContent = document.querySelector('.main-content');
+mainContent.removeChild(leftContent);
+
+//Part XIII
+let rightContent = document.querySelector('.right-content');
+rightContent.style.marginRight = 'auto';
