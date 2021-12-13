@@ -13,3 +13,8 @@ let sectionCenter = document.createElement('section');
 sectionCenter.className = 'center-content';
 main.appendChild(sectionCenter);
 
+//Part IV
+let p = document.createElement('p');
+p.innerHTML = 'Algum texto';
+sectionCenter.appendChild(p);
+
