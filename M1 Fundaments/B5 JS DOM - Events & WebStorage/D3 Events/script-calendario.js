@@ -159,13 +159,17 @@ function taskDayColor() {
   let taskColor = task.style.backgroundColor;
 
   day.addEventListener('click', (event) => {
-    let targetColor = event.target.style.color;
-    if (taskSelected.length > 0 && targetColor !== taskColor) {
+    // let targetColor = event.target.style.color;
+    let color = taskSelected[0].style.backgroundColor;
+    event.target.style.color = color;
+    
+    
+    /* if (taskSelected.length > 0 && targetColor !== taskColor) {
       let color = taskSelected[0].style.backgroundColor;
       event.target.style.color = color;
     } else if (taskSelected.length !== 0 && targetColor === taskColor) {
       event.target.style.color = 'rgb(119,119,119)';
-    }
+    } */
   });
 }
 
