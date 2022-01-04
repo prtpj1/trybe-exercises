@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercise 6.1</title>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <fieldset>
+                <legend>Personal Data</legend>
+                <label for="full-name">Full name:
+                    <input required type="text" name="full-name" id="full-name" maxlengtha="40">
+                </label>
+                
+                <label for="email">Email:
+                    <input required type="email" name="email" id="email" maxlength="50">
+                </label>
+                
+                <label for="cpf">CPF:
+                    <input required type="number" name="cpf" id="cpf" maxlength="11">
+                </label>
+                
+                <label for="address">Address:
+                    <input required type="text" name="address" id="address" maxlength="200">
+                </label>
+                
+                <label for="city">City:
+                    <input required type="text" name="city" id="city" maxlength="28">
+                </label>
+                
+                <!-- <label for="state">State:
+                    <select name="state" id="state">
+                </label>
+                 -->
+
+                <label for="apto">Apartment:
+                    <input required type="radio" name="apto" id="apto">
+                </label>
+                <label for="house">House:
+                    <input required type="radio" name="house" id="house">
+                </label>
+
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Your last job:</legend>
+                <label for="curriculum-abstract">Curriculum abstract:
+                    <textarea required name="curriculum-abstract" id="curriculum-abstract" cols="30" rows="10" maxlength="1000"></textarea>
+                </label>
+
+                <label for="role">Role:
+                    <input required type="text" name="role" id="role" maxlength="40">
+                </label>
+
+                <label for="role-desc">Role description:
+                    <input required type="text" name="role-desc" id="role-desc" maxlength="500">
+                </label>
+
+                <label for="start-date">Start date:
+                    <input required type="date" name="" id="">
+                </label>
+            </fieldset>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
