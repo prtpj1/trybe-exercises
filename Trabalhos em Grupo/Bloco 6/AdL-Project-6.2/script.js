@@ -7,6 +7,7 @@ const btnSubmit = document.querySelector('#submit-btn');
 const btnClear = document.querySelector('#clear-btn');
 const ol = document.querySelector('ol');
 
+
 function getQuarto(){
   for (let i = 0; i <bedroom.length; i++) {
     if (bedroom[i].checked) {
