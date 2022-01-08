@@ -1,68 +1,60 @@
-window.onload = function() {
-
 //DOM
-const STATES = document.querySelector('#state');
-const BTN_SUBMIT = document.querySelector('#btn-submit');
-const BTN_CLEAR_ALL = document.querySelector('#btn-clear-all');
+const STATES = document.querySelector("#state");
+const BTN_SUBMIT = document.querySelector("#btn-submit");
+// const BTN_CLEAR_ALL = document.querySelector('#btn-clear-all');
 
 //Listeners
-STATES.addEventListener('mouseover', selectState);
-BTN_SUBMIT.addEventListener('click', submit);
-BTN_CLEAR_ALL.addEventListener('click', clearAll);
+BTN_SUBMIT.addEventListener("click", submit);
+// BTN_CLEAR_ALL.addEventListener('click', clearAll);
 
 //Functions
 
-  function selectState() {
-    let allStates = [
-      'Acre',
-      'Alagoas',
-      'Amapá',
-      'Amazonas',
-      'Bahia',
-      'Ceará',
-      'Distrito Federal',
-      'Espirito Santo',
-      'Goiás',
-      'Maranhão',
-      'Minas Gerais',
-      'Mato Grosso do Sul',
-      'Mato Grosso',
-      'Pará',
-      'Paraíba',
-      'Paraná',
-      'Pernambuco',
-      'Piauí',
-      'Rio de Janeiro',
-      'Rio Grande do Norte',
-      'Rio Grande do Sul',
-      'Rondônia',
-      'Roraima',
-      'Santa Catarina',
-      'São Paulo',
-      'Sergipe',
-      'Tocantins',
-    ];
+function selectState() {
+  let allStates = [
+    "Acre",
+    "Alagoas",
+    "Amapá",
+    "Amazonas",
+    "Bahia",
+    "Ceará",
+    "Distrito Federal",
+    "Espirito Santo",
+    "Goiás",
+    "Maranhão",
+    "Minas Gerais",
+    "Mato Grosso do Sul",
+    "Mato Grosso",
+    "Pará",
+    "Paraíba",
+    "Paraná",
+    "Pernambuco",
+    "Piauí",
+    "Rio de Janeiro",
+    "Rio Grande do Norte",
+    "Rio Grande do Sul",
+    "Rondônia",
+    "Roraima",
+    "Santa Catarina",
+    "São Paulo",
+    "Sergipe",
+    "Tocantins",
+  ];
 
-    for (let i = 0; i < allStates.length; i += 1) {
-      let option = document.createElement('option');
-      option.value = allStates[i];
-      option.innerText = allStates[i];
-      STATES.appendChild(option);
-      // allStates[0]
-      // option.selected = true;
-    }
+  for (let i = 0; i < allStates.length; i += 1) {
+    let option = document.createElement("option");
+    option.value = allStates[i];
+    option.innerText = allStates[i];
+    STATES.appendChild(option);
+    // allStates[0]
+    // option.selected = true;
   }
-
-selectState();
+}
 
 function submit(event) {
   event.preventDefault();
 }
 
-function vadidationInput() {}
-
-function validationData() {}
-
+selectState();
 //VARIABLES DECLARATION
 let inputs = {
   fullName: {
@@ -72,12 +64,12 @@ let inputs = {
   email: {
     maxLength: 50,
     required: true,
-    type: 'email',
+    type: "email",
   },
   cpf: {
     maxLength: 11,
     required: true,
-    type: 'number',
+    type: "number",
   },
   address: {
     maxLength: 200,
@@ -88,14 +80,14 @@ let inputs = {
     required: true,
   },
   state: {
-    type: 'select',
+    type: "select",
     required: true,
   },
   houseType: {
-    type: 'radio',
+    type: "radio",
     required: true,
   },
-  resume: {
+  curriculumAbstract: {
     maxLength: 1000,
     required: true,
   },
@@ -103,13 +95,12 @@ let inputs = {
     maxLength: 40,
     required: true,
   },
-  roleDescription: {
+  roleDesc: {
     maxLength: 500,
     required: true,
   },
   startDate: {
-    type: 'date',
+    type: "date",
     required: true,
   },
-};
 };
