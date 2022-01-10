@@ -52,9 +52,11 @@ figcaption {
     font-size: 1em;
     margin: 3%;
   }
+  h2 {
+    margin-bottom: -3%;
+  }
 
   section {
-    /* border: 1px solid red; */
     display: flex;
 
     justify-content: center;
@@ -63,5 +65,24 @@ figcaption {
 
   figure {
     width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: rgb(254, 255, 185);
+    font-size: 1.3em;
+    margin: 2%;
+    max-width: 90%;
+  }
+  h2 {
+    margin-bottom: -3%;
+  }
+
+  figure {
+    margin-top: 5%;
+  }
+
+  figure > :first-child {
+    margin-top: auto;
   }
 }
