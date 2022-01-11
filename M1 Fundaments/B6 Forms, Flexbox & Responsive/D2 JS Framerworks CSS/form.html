@@ -25,7 +25,7 @@
                 <legend>Personal Data</legend>
                 <div class="lineContent">
                     <label for="name">Name:</label>
-                    <input  type="text" name="name" id="name" maxlengtha="40">
+                    <input type="text" name="name" id="name" maxlengtha="40">
                 </div>
                 <div class="lineContent">
                     <label for="email">Email:</label>
@@ -35,15 +35,15 @@
                 </div>
                 <div class="lineContent">
                     <label for="cpf">CPF:</label>
-                    <input  type="number" name="cpf" id="cpf" maxlength="11">
+                    <input type="number" name="cpf" id="cpf" maxlength="11">
                 </div>
                 <div class="lineContent">
                     <label for="address">Address:</label>
-                    <input  type="text" name="address" id="address" maxlength="200">
+                    <input type="text" name="address" id="address" maxlength="200">
                 </div>
                 <div class="lineContent">
                     <label for="city">City:</label>
-                    <input  type="text" name="city" id="city" maxlength="28">
+                    <input type="text" name="city" id="city" maxlength="28">
                 </div>
                 <div class="lineContent">
                     <label for="state">State:</label>
@@ -54,9 +54,9 @@
                 <div class="lineContent">
                     <div class="houseType" id="house-type">
                         <label for="house-type">House type:</label>
-                        <input  type="radio" name="houseType" id="apto" value="apto">
+                        <input type="radio" name="houseType" id="apto" value="apto">
                         <span>Apartment</span>
-                        <input  type="radio" name="houseType" id="house" value="house">
+                        <input type="radio" name="houseType" id="house" value="house">
                         <span>House</span>
                     </div>
                 </div>
@@ -65,28 +65,33 @@
                 <legend>Your last job:</legend>
                 <div class="lineContent">
                     <label for="curriculum-abstract">Curriculum abstract:</label>
-                    <textarea  name="curriculumAbstract" id="curriculum-abstract" cols="30" rows="10"
+                    <textarea name="curriculumAbstract" id="curriculum-abstract" cols="30" rows="10"
                         maxlength="1000"></textarea>
                 </div>
                 <div class="lineContent">
                     <label for="role">Role:</label>
-                    <input  type="text" name="role" id="role" maxlength="40">
+                    <input type="text" name="role" id="role" maxlength="40">
                 </div>
                 <div class="lineContent">
                     <label for="role-desc">Role description:</label>
-                    <input  type="text" name="roleDesc" id="role-desc" maxlength="500">
+                    <input type="text" name="roleDesc" id="role-desc" maxlength="500">
                 </div>
                 <div class="lineContent">
                     <label for="start-date">Start date:
-                        <input  type="text" id="datepicker" name="startDate">
+                        <input type="text" id="datepicker" name="startDate">
                     </label>
                 </div>
             </fieldset>
             <div class="buttons">
-                <button type="submit" id="btn-submit" class="btns">Submit</button>
-                <button type="reset" id="btn-clear" class="btns clears">Clear form</button>
-                <button id="btn-clear-all" class="btns clears">Clear all</button>
-                
+                <div class="btnSub">
+                    <button type="submit" id="btn-submit" class="btns">Submit</button>
+                </div>
+                <div class="btnClear">
+                    <button type="reset" id="btn-clear" class="btns">Clear form</button>
+                    <button id="btn-clear-all" class="btns">Clear all</button>
+                </div>
+
+
             </div>
 
         </form>
