@@ -18,16 +18,18 @@ input[type="radio"] {
 }
 
 /* CLASSES */
-.btns {
-  padding: 5px 5px;
-  margin: 0 5px;
+.buttons {
+  width: 85%;
+  margin: 0 0 30px 0;
+  display: flex;
 }
 
-.buttons {
-  /* border: 1px solid red; */
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
+.btns {
+  padding: 5px 5px;
+}
+
+.submit {
+  margin-right: auto;
 }
 
 .formContainer {
