@@ -42,6 +42,17 @@ chosePeriod(lesson2, 'turno', 'noite');
 // objSize(lesson2);
 // listValues(lesson1);
 
-const lessons = {};
-Object.assign(lessons, {lesson1, lesson2, lesson3});
-console.log(lessons);
+const allLessons = {};
+Object.assign(allLessons, {lesson1, lesson2, lesson3});
+console.log(allLessons);
+
+function totalStudents(obj){
+	let total = 0;
+  const arr = Object.keys(obj);
+  for (i in arr) {
+    total+= obj[arr[i]].numeroEstudantes;
+  }
+  return total;
+}
+
+console.log(totalStudents(allLessons));
