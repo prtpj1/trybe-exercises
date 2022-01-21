@@ -17,3 +17,10 @@ const lesson1 = {
 	professor: 'Maria Clara',
 	turno: 'noite',
   };
+
+  function chosePeriod(lesson, shift, period){
+	  lesson[shift] = period;
+  };
+
+chosePeriod(lesson2, 'turno', 'noite');
+console.log(lesson2);
