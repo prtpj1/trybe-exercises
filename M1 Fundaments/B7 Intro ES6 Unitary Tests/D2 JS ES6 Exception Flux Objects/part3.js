@@ -28,10 +28,16 @@ function listKeys(obj) {
 }
 
 function objSize(obj) {
-	const size = Object.keys(obj).length;
-	console.log(size);
+  const size = Object.keys(obj).length;
+  console.log(size);
+}
+
+function listValues(obj) {
+	const values = Object.values(obj);
+	console.log(values);
   }
 
 chosePeriod(lesson2, 'turno', 'noite');
 listKeys(lesson3);
 objSize(lesson2);
+listValues(lesson1);
