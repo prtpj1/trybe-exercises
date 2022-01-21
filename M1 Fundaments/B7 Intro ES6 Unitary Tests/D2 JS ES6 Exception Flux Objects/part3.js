@@ -48,9 +48,11 @@ console.log(allLessons);
 
 function totalStudents(obj){
 	let total = 0;
-  const arr = Object.keys(obj);
-  for (i in arr) {
-    total+= obj[arr[i]].numeroEstudantes;
+  const key = Object.keys(obj);
+
+  for(let i = 0; i < key.length; i+=1){
+    const currentKey = key[i];
+    total += obj[currentKey].numeroEstudantes;
   }
   return total;
 }
