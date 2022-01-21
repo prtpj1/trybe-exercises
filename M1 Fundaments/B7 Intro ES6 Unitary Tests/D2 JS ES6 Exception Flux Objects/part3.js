@@ -33,11 +33,15 @@ function objSize(obj) {
 }
 
 function listValues(obj) {
-	const values = Object.values(obj);
-	console.log(values);
-  }
+  const values = Object.values(obj);
+  console.log(values);
+}
 
 chosePeriod(lesson2, 'turno', 'noite');
-listKeys(lesson3);
-objSize(lesson2);
-listValues(lesson1);
+// listKeys(lesson3);
+// objSize(lesson2);
+// listValues(lesson1);
+
+const lessons = {};
+Object.assign(lessons, {lesson1, lesson2, lesson3});
+console.log(lessons);
