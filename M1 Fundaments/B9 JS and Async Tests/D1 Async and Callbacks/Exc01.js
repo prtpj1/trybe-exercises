@@ -48,14 +48,25 @@ const tempInFahrenheit = (marsTemp) =>
 const greet = (marsTemp) =>
     console.log(`Hi there! Curiosity here. Right now is ${marsTemp}°C ar Mars!`);
 
-const sendMarsTemp = (callback) => {
+const handleError = (errorReason) =>
+    console.log(`Error getting temperature: ${errorReason}`);
+
+const sendMarsTemp = (callback, onError) => {
     const marsTemp = getMarsTemp();
+    // const msgSuccessful = (Math.random() <= 0.6);
     // setTimeout(() => console.log(`Mars temperature is: ${currentTemp} degree`), messageDelay());
-    setTimeout(() => callback(marsTemp), messageDelay());
+    // setTimeout(() => callback(marsTemp), messageDelay());
+    setTimeout(() => {
+        (Math.random() <= 0.6) ?
+            (callback(marsTemp)) :
+            (onError('Robot is busy'));
+    }, messageDelay());
 };
+
+
 // getMarsTemp();
-sendMarsTemp(tempInFahrenheit);
-sendMarsTemp(greet);
+sendMarsTemp(tempInFahrenheit, handleError);
+sendMarsTemp(greet, handleError);
 // sendMarsTemp();
 // getPlanet();
 // planetDistanceFromSun(mars);
