@@ -3,6 +3,7 @@ import React from 'react';
 import PersonalData from './PersonalData';
 import OtherData from './OtherData';
 
+
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -13,19 +14,44 @@ class Form extends React.Component {
       schooling: '',
       lastJob: '',
       human: false,
+      formularioComErros: true,
     };
   }
 
   handleChange = ({ target }) => {
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => {
+        this.handleError();
+      },
+    );
+  };
+
+  handleError = () => {
+    const { name, email, schooling, lastJob, human } = this.state;
+
+    const errorCases = [
+      !name,
+      !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/),
+      !schooling,
+      !lastJob,
+      !human,
+    ];
+
+    const formularioPreenchido = errorCases.every((error) => error !== true);
+
     this.setState({
-      [name]: value,
+      formularioComErros: !formularioPreenchido,
     });
   };
 
   render() {
-    const { name, email, schooling, lastJob, human } = this.state;
+    const { name, email, schooling, lastJob, human, formularioComErros } =
+      this.state;
 
     return (
       <div className="App">
@@ -47,6 +73,13 @@ class Form extends React.Component {
             handleChange={this.handleChange}
           />
         </form>
+        {formularioComErros ? (
+          <span style={{ color: 'red' }}>Preencha todos os campos</span>
+        ) : (
+          <span style={{ color: 'green' }}>
+            Todos os campos foram preenchidos!
+          </span>
+        )}
       </div>
     );
   }

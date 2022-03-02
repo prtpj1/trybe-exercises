@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCheck, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 class OtherData extends React.Component {
   render() {
@@ -6,6 +7,7 @@ class OtherData extends React.Component {
 
     return (
       <fieldset>
+        
         <legend>Dados Profissionais:</legend>
         <label htmlFor="schooling">
           Grau de escolaridade:
@@ -30,11 +32,12 @@ class OtherData extends React.Component {
           id="lastJob"
           name="lastJob"
           onChange={handleChange}
+          placeholder="Preencha todos os campos"
           rows="10"
           value={inptLastJob}
         />
+        {!inptLastJob ? <FaArrowAltCircleLeft /> : <FaCheck />}
         <br />
-
         <input
           id="human"
           name="human"
@@ -42,7 +45,7 @@ class OtherData extends React.Component {
           type="checkbox"
           value={inptHuman}
         />
-        <label htmlFor="human">Você é humano?</label>
+        <label htmlFor="human">Você é humano?</label> <FaArrowAltCircleLeft />
         <br />
 
         <input type="file" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCheck, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 class PersonalData extends React.Component {
   render() {
@@ -7,24 +8,32 @@ class PersonalData extends React.Component {
     return (
       <fieldset>
         <legend>Dados Pessoais:</legend>
-        <label htmlFor="name">Nome:</label>
-        <input
-          id="name"
-          name="name"
-          onChange={handleChange}
-          type="text"
-          value={inptName}
-        />
+        <label htmlFor="name">
+          Nome:
+          <input
+            id="name"
+            name="name"
+            onChange={handleChange}
+            placeholder="Preencha todos os campos"
+            type="text"
+            value={inptName}
+          />
+          {inptName === undefined ? <FaCheck /> : <FaArrowAltCircleLeft />}
+        </label>
         <br />
 
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          onChange={handleChange}
-          type="email"
-          value={inptEmail}
-        />
+        <label htmlFor="email">
+          Email:
+          <input
+            id="email"
+            name="email"
+            onChange={handleChange}
+            placeholder="Preencha todos os campos"
+            type="email"
+            value={inptEmail}
+          />
+          {inptEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) ? <FaCheck /> : <FaArrowAltCircleLeft />}
+        </label>
       </fieldset>
     );
   }
